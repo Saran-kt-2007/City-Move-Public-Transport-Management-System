@@ -1,0 +1,16 @@
+{
+  "name": "citymove-ptms",
+  "version": "1.0.0",
+  "description": "CityMove Public Transport Management System — root launcher",
+  "scripts": {
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "seed":        "cd backend && npm run seed",
+    "dev":         "concurrently --names \"API,UI\" --prefix-colors \"cyan,magenta\" \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
+    "start":       "npm run dev",
+    "dev:backend":  "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
